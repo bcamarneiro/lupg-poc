@@ -4,41 +4,11 @@ import clsx from 'clsx';
 import { Button } from '@components';
 
 import logo from '@assets/logo.svg';
+import { ROUTES } from '@routes';
 
 interface NavbarProps {
   toggleDarkMode: () => void;
 }
-
-const ROUTES = [
-  {
-    name: 'Store',
-    path: '/',
-  },
-  {
-    name: 'Reviews',
-    path: '/reviews',
-  },
-  {
-    name: 'Blog',
-    path: '/blog',
-  },
-  {
-    name: 'About',
-    path: '/about',
-  },
-  {
-    name: 'Media',
-    path: '/media',
-  },
-  {
-    name: 'Locations',
-    path: '/locations',
-  },
-  {
-    name: 'Contact',
-    path: '/contact',
-  },
-];
 
 function Navbar({ toggleDarkMode }: NavbarProps) {
   const location = useLocation();
@@ -46,7 +16,7 @@ function Navbar({ toggleDarkMode }: NavbarProps) {
   return (
     <div
       id="navbar"
-      className={clsx(styles.wrapper, 'bg-levelup-700 dark:bg-levelup-200')}
+      className={clsx(styles.wrapper, 'bg-levelup-600 dark:bg-levelup-200')}
     >
       <div className={styles.logo}>
         <img
@@ -60,9 +30,10 @@ function Navbar({ toggleDarkMode }: NavbarProps) {
           <Link
             key={route.path}
             className={clsx(
+              pathname === route.path && '!text-yelevelup-100 !dark:text-yelevelup-50',
               styles.navbarItem,
-              'transition-colors text-levelup-100 hover:text-levelup-300 dark:text-levelup-700 dark:hover:text-levelup-500 ',
-              pathname === route.path && 'text-yelevelup-100 dark:text-yelevelup-50',
+              'transition-colors text-levelup-400 hover:text-levelup-300',
+              'dark:text-levelup-500  dark:hover:text-yelevelup-100',
             )}
             to={route.path}
           >
