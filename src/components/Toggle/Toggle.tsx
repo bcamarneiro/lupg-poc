@@ -31,11 +31,12 @@ function Toggle({ options, onChange }: ToggleProps) {
         >
           {option.icon({ inverted: active === option.value })}
           <span
-            className={
+            className={clsx(
               active === option.value
                 ? 'text-levelup-600 dark:text-levelup-50'
-                : 'text-levelup-200 dark:text-levelup-600'
-            }
+                : 'text-levelup-200 dark:text-levelup-600',
+              'leading-[1.875rem]',
+            )}
           >
             {option.label}
           </span>

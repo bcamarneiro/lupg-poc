@@ -1,5 +1,5 @@
 .gallery {
-  @apply grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4;
+  @apply grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-[1.6875rem];
 }
 
 .list {
@@ -7,5 +7,9 @@
 }
 
 .header {
-  @apply flex justify-between items-center pb-4 gap-4;
+  @apply flex justify-between items-center pb-3 gap-4;
+}
+
+.title {
+  @apply text-[1.375rem] py-[1.625rem] font-semibold;
 }

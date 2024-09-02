@@ -12,7 +12,7 @@ interface SearchBarProps {
 function SearchBar({ onChange, className = '' }: SearchBarProps) {
   return (
     <div className={clsx(className, 'relative')}>
-      <div className={styles.icon}>
+      <div className={clsx(styles.icon, 'left-1')}>
         <Magnifier />
       </div>
 

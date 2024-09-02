@@ -3,5 +3,5 @@
 }
 
 .input {
-  @apply w-full p-3 ps-10 text-sm border rounded-xl outline-none;
+  @apply w-full p-[0.85rem] ps-10 text-sm border rounded-xl outline-none leading-snug placeholder:text-base;
 }

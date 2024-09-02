@@ -8,10 +8,11 @@ export default {
     },
     extend: {
       screens: {
-        md: '862px',
+        lg: '956px',
       },
       spacing: {
         33: '8.25rem',
+        35: '8.75rem',
       },
       colors: {
         levelup: {

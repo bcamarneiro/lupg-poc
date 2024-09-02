@@ -25,7 +25,7 @@ function Card({ product, variant = 'default' }: CardProps) {
         src={product.images[0].url}
         alt={product.images[0].alt}
       />
-      <div className={styles.content}>
+      <div className={clsx(styles.content, 'bg-levelup-600 dark:bg-levelup-200')}>
         {variant === 'default' && (
           <div className={styles.price}>{formatPrice(product.price.amount, product.price.currency)}</div>
         )}
@@ -40,6 +40,7 @@ function Card({ product, variant = 'default' }: CardProps) {
           <div className={styles.price}>{formatPrice(product.price.amount, product.price.currency)}</div>
         )}
         <Button
+          className="mt-1"
           onClick={function (): void {
             throw new Error('Function not implemented.');
           }}

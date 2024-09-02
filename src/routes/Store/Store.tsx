@@ -19,7 +19,7 @@ function Store() {
     <>
       <div className={styles.header}>
         <SearchBar
-          className="grow"
+          className="grow pr-[10px]"
           onChange={(e) => debouncedSetSearch(e.target.value)}
         />
         <Toggle
@@ -30,6 +30,7 @@ function Store() {
           onChange={(value: string) => setIsGrid(value === 'grid')}
         />
       </div>
+      <h1 className={styles.title}>All Products</h1>
       <div className={clsx(styles.wrapper, isGrid ? styles.gallery : styles.list)}>
         {isLoading && <div>Loading...</div>}
         {!isLoading &&
