@@ -1,0 +1,24 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'selector',
+  theme: {
+    extend: {
+      colors: {
+        levelup: {
+          50: '#000000',
+          100: '#111111',
+          200: '#191919',
+          300: '#222222',
+          400: '#5E5E5E',
+          500: '#A1A1A1',
+          600: '#DDDDDD',
+          700: '#E6E6E6',
+          800: '#EEEEEE',
+          900: '#FFFFFF',
+        },
+      },
+    },
+  },
+  plugins: [],
+};
