@@ -17,6 +17,10 @@ export default {
           800: '#EEEEEE',
           900: '#FFFFFF',
         },
+        yelevelup: {
+          50: '#FCC85D',
+          100: '#B58A00',
+        },
       },
     },
   },

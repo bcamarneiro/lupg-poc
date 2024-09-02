@@ -1,6 +1,5 @@
 .wrapper {
   @apply flex justify-between items-center;
-  @apply bg-levelup-700 dark:bg-levelup-200;
   @apply py-3 px-8;
 }
 
@@ -9,7 +8,11 @@
 }
 
 .navbarItem {
-  @apply text-levelup-100 dark:text-levelup-700;
-  @apply hover:text-levelup-300 dark:hover:text-levelup-500;
-  @apply transition-colors;
+}
+
+.actions {
+  @apply flex flex-row gap-4;
+}
+
+.logo {
 }

@@ -1,6 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import clsx from 'clsx';
+import { Button } from '@components';
+
+import logo from '@assets/logo.svg';
 
 interface NavbarProps {
   toggleDarkMode: () => void;
@@ -38,6 +41,8 @@ const ROUTES = [
 ];
 
 function Navbar({ toggleDarkMode }: NavbarProps) {
+  const location = useLocation();
+  const { pathname } = location;
   return (
     <div
       id="navbar"
@@ -45,8 +50,9 @@ function Navbar({ toggleDarkMode }: NavbarProps) {
     >
       <div className={styles.logo}>
         <img
-          src="../../assets/logo.svg"
-          alt="Logo"
+          src={logo}
+          className="logo"
+          alt="Level Up Gaming logo"
         />
       </div>
       <nav className={styles.navbar}>
@@ -55,7 +61,8 @@ function Navbar({ toggleDarkMode }: NavbarProps) {
             key={route.path}
             className={clsx(
               styles.navbarItem,
-              'transition-colors text-levelup-100 dark:text-levelup-700 hover:text-levelup-300 dark:hover:text-levelup-500',
+              'transition-colors text-levelup-100 hover:text-levelup-300 dark:text-levelup-700 dark:hover:text-levelup-500 ',
+              pathname === route.path && 'text-yelevelup-100 dark:text-yelevelup-50',
             )}
             to={route.path}
           >
@@ -64,8 +71,8 @@ function Navbar({ toggleDarkMode }: NavbarProps) {
         ))}
       </nav>
       <div className={styles.actions}>
-        <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
-        <button onClick={() => alert('NOT READY YET')}>View Cart</button>
+        <Button onClick={toggleDarkMode}>Toggle Dark Mode</Button>
+        <Button onClick={() => alert('NOT READY YET')}>View Cart</Button>
       </div>
     </div>
   );

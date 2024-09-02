@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className={clsx(styles.app, 'bg-levelup-800 dark:bg-levelup-100')}>
+    <div className={clsx(styles.app, 'bg-levelup-800 dark:bg-levelup-100 text-levelup-50 dark:text-levelup-900')}>
       <Navbar toggleDarkMode={toggleDarkMode} />
     </div>
   );
