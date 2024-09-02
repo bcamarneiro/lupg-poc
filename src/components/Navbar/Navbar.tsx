@@ -6,11 +6,7 @@ import { Button } from '@components';
 import logo from '@assets/logo.svg';
 import { ROUTES } from '@routes';
 
-interface NavbarProps {
-  toggleDarkMode: () => void;
-}
-
-function Navbar({ toggleDarkMode }: NavbarProps) {
+function Navbar() {
   const location = useLocation();
   const { pathname } = location;
   return (
@@ -30,7 +26,7 @@ function Navbar({ toggleDarkMode }: NavbarProps) {
           <Link
             key={route.path}
             className={clsx(
-              pathname === route.path && '!text-yelevelup-100 !dark:text-yelevelup-50',
+              pathname === route.path && '!text-yelevelup-100 !dark:text-yelevelup-50 font-medium',
               styles.navbarItem,
               'transition-colors text-levelup-400 hover:text-levelup-300',
               'dark:text-levelup-500  dark:hover:text-yelevelup-100',
@@ -42,8 +38,12 @@ function Navbar({ toggleDarkMode }: NavbarProps) {
         ))}
       </nav>
       <div className={styles.actions}>
-        <Button onClick={toggleDarkMode}>Toggle Dark Mode</Button>
-        <Button onClick={() => alert('NOT READY YET')}>View Cart</Button>
+        <Button
+          className="w-33"
+          onClick={() => alert('NOT READY YET')}
+        >
+          View Cart
+        </Button>
       </div>
     </div>
   );

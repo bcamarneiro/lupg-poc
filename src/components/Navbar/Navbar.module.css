@@ -1,10 +1,10 @@
 .wrapper {
   @apply flex justify-between items-center;
-  @apply py-3 px-8;
+  @apply py-3 px-8 max-w-screen-xl mx-auto;
 }
 
 .navbar {
-  @apply flex flex-row gap-8;
+  @apply flex flex-row gap-8 text-lg;
 }
 
 .navbarItem {
@@ -15,4 +15,5 @@
 }
 
 .logo {
+  @apply ml-[1px];
 }

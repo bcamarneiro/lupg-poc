@@ -3,7 +3,16 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'selector',
   theme: {
+    fontFamily: {
+      sans: ['IBM Plex Sans', 'sans-serif'],
+    },
     extend: {
+      screens: {
+        md: '862px',
+      },
+      spacing: {
+        33: '8.25rem',
+      },
       colors: {
         levelup: {
           50: '#000000',

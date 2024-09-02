@@ -1,4 +1,4 @@
-import { Navbar, Page } from '@components';
+import { Button, Navbar, Page } from '@components';
 
 import styles from './App.module.css';
 import clsx from 'clsx';
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className={clsx(styles.app, 'bg-levelup-800 dark:bg-levelup-100 text-levelup-50 dark:text-levelup-900')}>
-      <Navbar toggleDarkMode={() => setIsDarkMode(!isDarkMode)} />
+      <Navbar />
       <Page>
         <Routes>
           {ROUTES.map((route) => (
@@ -30,6 +30,13 @@ function App() {
           ))}
         </Routes>
       </Page>
+
+      <Button
+        className="absolute bottom-5 right-5"
+        onClick={() => setIsDarkMode(!isDarkMode)}
+      >
+        Toggle Dark Mode
+      </Button>
     </div>
   );
 }

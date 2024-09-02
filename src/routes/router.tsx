@@ -18,11 +18,6 @@ export const ROUTES = [
     element: <div>Blog Not available! 😭</div>,
   },
   {
-    name: 'About',
-    path: '/about',
-    element: <div>About Not available! 😭</div>,
-  },
-  {
     name: 'Media',
     path: '/media',
     element: <div>Media Not available! 😭</div>,

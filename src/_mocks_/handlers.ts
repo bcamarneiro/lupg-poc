@@ -1,5 +1,5 @@
 import { http, HttpResponse, delay, passthrough } from 'msw';
-import MOCKED_PRODUCTS from './index';
+import MOCKED_PRODUCTS from './DB';
 
 export const handlers = [
   http.get('https://products.dummy.api/products', async ({ request }) => {
