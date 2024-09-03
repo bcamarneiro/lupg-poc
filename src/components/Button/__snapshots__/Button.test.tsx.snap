@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button component > renders children correctly 1`] = `
+<DocumentFragment>
+  <button
+    class="_button_2a1efe border-levelup-100 dark:border-levelup-800"
+  >
+    Click me
+  </button>
+</DocumentFragment>
+`;

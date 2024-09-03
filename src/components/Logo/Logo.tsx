@@ -14,6 +14,7 @@ export function Logo() {
 
   return (
     <svg
+      data-testid="logo"
       width="108"
       height="34"
       viewBox="0 0 108 34"

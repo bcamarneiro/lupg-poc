@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tag component > renders tag with children correctly 1`] = `
+<DocumentFragment>
+  <span
+    class="_tag_f783ef bg-levelup-500 dark:bg-levelup-300"
+  >
+    Test Tag
+  </span>
+</DocumentFragment>
+`;

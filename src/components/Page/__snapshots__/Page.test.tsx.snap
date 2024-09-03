@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Page component > renders children correctly 1`] = `
+<DocumentFragment>
+  <main
+    class="_page_e95033"
+  >
+    <div>
+      Test Content
+    </div>
+  </main>
+</DocumentFragment>
+`;

@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Card component > renders product information correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="_card_1f2933 border-levelup-200 dark:border-levelup-350 bg-levelup-600 dark:bg-levelup-200"
+  >
+    <img
+      alt="Test Image"
+      class="_image_1f2933"
+      src="test-image.jpg"
+    />
+    <div
+      class="_content_1f2933"
+    >
+      <div
+        class="_price_1f2933"
+      >
+        $10.00
+      </div>
+      <div
+        class="_name_1f2933"
+      >
+        Test Product
+      </div>
+      <div
+        class="_description_1f2933 text-levelup-300 dark:text-levelup-500"
+      >
+        This is a test product
+      </div>
+      <div
+        class="_tags_1f2933"
+      >
+        <span
+          class="_tag_f783ef bg-levelup-500 dark:bg-levelup-300"
+        >
+          tag1
+        </span>
+        <span
+          class="_tag_f783ef bg-levelup-500 dark:bg-levelup-300"
+        >
+          tag2
+        </span>
+      </div>
+      <button
+        class="mt-1 _button_2a1efe border-levelup-100 dark:border-levelup-800"
+      >
+        View Details
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
