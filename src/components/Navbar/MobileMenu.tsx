@@ -11,7 +11,7 @@ function MobileMenu() {
   const { pathname } = location;
   return (
     <Menu>
-      <MenuButton className={'size-10 flex items-center justify-center'}>
+      <MenuButton className={styles.button}>
         <Burger />
       </MenuButton>
       <nav>

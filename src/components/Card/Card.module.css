@@ -18,7 +18,7 @@
   }
 
   .description {
-    @apply hidden md:flex ml-0 mr-0 w-full max-w-[10rem] lg:max-w-none lg:w-[17.75rem] leading-4 px-2 pt-2 truncate;
+    @apply hidden md:block ml-0 mr-0 w-full max-w-[10rem] lg:max-w-none lg:w-[17.75rem] leading-4 px-2 pt-2 truncate;
   }
 
   .tags {

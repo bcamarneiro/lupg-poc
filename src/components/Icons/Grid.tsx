@@ -1,4 +1,4 @@
-import { useDarkMode } from '@hooks/DarkModeContext';
+import { useDarkMode } from '@hooks';
 import { useMemo } from 'react';
 
 export function Grid({ inverted }: { inverted?: boolean }) {

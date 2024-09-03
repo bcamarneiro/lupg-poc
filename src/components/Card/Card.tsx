@@ -1,10 +1,9 @@
-import { Product } from '@types';
-
 import styles from './Card.module.css';
 import Button from '@components/Button';
 import clsx from 'clsx';
 import Tag from '@components/Tag';
 import formatPrice from '@utils/formatPrice';
+import { Product } from '@services/products/types';
 
 interface CardProps {
   product: Product;
@@ -31,15 +30,7 @@ function Card({ product, variant = 'default' }: CardProps) {
           <div className={styles.price}>{formatPrice(product.price.amount, product.price.currency)}</div>
         )}
         <div className={clsx(variant === 'horizontal' && 'truncate', styles.name)}>{product.name}</div>
-        <div
-          className={clsx(
-            styles.description,
-            'text-levelup-300 dark:text-levelup-500',
-            //variant === 'horizontal' && 'hidden lg:flex',
-          )}
-        >
-          {product.description}
-        </div>
+        <div className={clsx(styles.description, 'text-levelup-300 dark:text-levelup-500')}>{product.description}</div>
         <div className={styles.tags}>
           {product.tags.map((tag) => (
             <Tag key={tag}>{tag}</Tag>

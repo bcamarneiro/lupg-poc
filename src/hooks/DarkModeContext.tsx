@@ -8,7 +8,10 @@ type DarkModeContextType = {
 const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined);
 
 export const DarkModeProvider = ({ children }: PropsWithChildren) => {
-  const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('darkMode') === 'true');
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const storedMode = localStorage.getItem('darkMode');
+    return storedMode === null ? true : storedMode === 'true';
+  });
 
   useEffect(() => {
     if (isDarkMode) {

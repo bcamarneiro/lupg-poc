@@ -5,7 +5,7 @@ import { Button } from '@components';
 
 import { ROUTES } from '@routes';
 import MobileMenu from './MobileMenu';
-import Logo from '@components/Logo';
+import { Logo } from '@components';
 
 function Navbar() {
   const location = useLocation();

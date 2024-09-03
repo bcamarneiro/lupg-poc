@@ -35,6 +35,7 @@ function Store() {
         {isLoading && <div>Loading...</div>}
         {!isLoading &&
           data &&
+          data.length > 0 &&
           data.map((product) => (
             <Card
               key={product.uuid}
@@ -42,6 +43,7 @@ function Store() {
               variant={isGrid ? 'default' : 'horizontal'}
             />
           ))}
+        {!isLoading && data && data.length === 0 && <div>No products matching the search criteria</div>}
       </div>
     </>
   );

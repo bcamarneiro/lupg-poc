@@ -26,5 +26,4 @@ export const handlers = [
   http.get('https://imgs.search.brave.com/*', passthrough),
   http.get('https://fonts.gstatic.com/*', passthrough),
   http.get('/src/*', passthrough),
-  http.get('/logo.svg', passthrough),
 ];

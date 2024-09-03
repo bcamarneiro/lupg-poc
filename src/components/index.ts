@@ -5,5 +5,6 @@ export { default as Card } from './Card';
 export { default as Tag } from './Tag';
 export { default as SearchBar } from './SearchBar';
 export { default as Toggle } from './Toggle';
+export { default as Logo } from './Logo';
 
 export { Grid, Magnifier, List, Burger } from './Icons';

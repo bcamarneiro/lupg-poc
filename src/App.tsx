@@ -4,7 +4,7 @@ import styles from './App.module.css';
 import clsx from 'clsx';
 import { Route, Routes } from 'react-router-dom';
 import { ROUTES } from '@routes';
-import { useDarkMode } from '@hooks/DarkModeContext';
+import { useDarkMode } from '@hooks';
 function App() {
   const { toggleDarkMode } = useDarkMode();
 

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Card from './Card';
-import { Product } from '@types';
+import { Product } from '@services/products/types';
 
 const mockProduct: Product = {
   uuid: '1',

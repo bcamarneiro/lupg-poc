@@ -8,9 +8,10 @@ import './index.css';
 import { DarkModeProvider } from '@hooks/DarkModeContext';
 
 async function enableMocking() {
-  if (process.env.NODE_ENV !== 'development') {
-    return;
-  }
+  // For now I want to enable mocking everywhere - I don't have a BE :)
+  // if (process.env.NODE_ENV !== 'development') {
+  //   return;
+  // }
 
   const { worker } = await import('./_mocks_/browser');
 
