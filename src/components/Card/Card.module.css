@@ -1,32 +1,36 @@
 .card {
-  @apply border border-solid rounded-lg overflow-hidden relative;
+  @apply border border-solid rounded-xl overflow-hidden relative;
 }
 
 .horizontal {
-  @apply flex flex-row gap-4 p-2 items-center;
+  @apply flex flex-row gap-3 py-[7px] px-[11px] items-center;
 
   .content {
     @apply p-0 flex flex-row gap-3 grow items-center justify-between;
   }
 
   .image {
-    @apply size-6 object-cover rounded-md;
+    @apply size-7 object-cover rounded-md;
   }
 
   .name {
-    @apply w-36;
+    @apply w-28 lg:w-44 text-base font-medium;
   }
 
   .description {
-    @apply truncate ml-0 mr-0 w-72;
+    @apply hidden md:flex ml-0 mr-0 w-full max-w-[10rem] lg:max-w-none lg:w-[17.75rem] leading-4 px-2 pt-2 truncate;
   }
 
   .tags {
-    @apply ml-10 mr-auto;
+    @apply hidden lg:flex ml-9 mr-auto gap-[0.375rem];
   }
 
   button {
-    @apply py-2;
+    @apply py-2 text-[0.875rem] w-[6.9375rem];
+  }
+
+  .price {
+    @apply text-[0.875rem] leading-4;
   }
 }
 
@@ -38,15 +42,15 @@
 }
 
 .name {
-  @apply text-[18px] font-medium leading-none;
+  @apply text-[18px] font-medium leading-none truncate;
 }
 
 .description {
-  @apply text-xs -mt-[5px];
+  @apply text-xs -mt-[5px] max-h-12 line-clamp-3;
 }
 
 .tags {
-  @apply flex flex-row gap-1;
+  @apply flex flex-row gap-2;
 }
 
 .image {

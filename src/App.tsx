@@ -2,19 +2,11 @@ import { Button, Navbar, Page } from '@components';
 
 import styles from './App.module.css';
 import clsx from 'clsx';
-import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { ROUTES } from '@routes';
+import { useDarkMode } from '@hooks/DarkModeContext';
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
+  const { toggleDarkMode } = useDarkMode();
 
   return (
     <div className={clsx(styles.app, 'bg-levelup-800 dark:bg-levelup-100 text-levelup-50 dark:text-levelup-900')}>
@@ -32,8 +24,8 @@ function App() {
       </Page>
 
       <Button
-        className="absolute bottom-5 right-5"
-        onClick={() => setIsDarkMode(!isDarkMode)}
+        className="absolute bottom-16 -right-[40px] rotate-90 bg-levelup-800 dark:bg-levelup-100"
+        onClick={() => toggleDarkMode()}
       >
         Toggle Dark Mode
       </Button>

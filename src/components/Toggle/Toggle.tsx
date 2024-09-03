@@ -16,7 +16,13 @@ function Toggle({ options, onChange }: ToggleProps) {
   const [active, setActive] = useState(options[0].value);
 
   return (
-    <div className={styles.wrapper}>
+    <div
+      className={clsx(
+        styles.wrapper,
+        'border-levelup-200 dark:border-levelup-350',
+        'bg-levelup-600 dark:bg-levelup-200',
+      )}
+    >
       {options.map((option) => (
         <div
           key={option.value}
@@ -29,13 +35,14 @@ function Toggle({ options, onChange }: ToggleProps) {
             onChange(option.value);
           }}
         >
-          {option.icon({ inverted: active === option.value })}
+          {option.icon({ inverted: active == option.value })}
           <span
             className={clsx(
               active === option.value
                 ? 'text-levelup-600 dark:text-levelup-50'
                 : 'text-levelup-200 dark:text-levelup-600',
               'leading-[1.875rem]',
+              'hidden sm:inline-block',
             )}
           >
             {option.label}

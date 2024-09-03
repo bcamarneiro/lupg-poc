@@ -23,4 +23,8 @@ export const handlers = [
 
   http.get('/src/assets/*', passthrough),
   http.get('https://s3-alpha-sig.figma.com/img/*', passthrough),
+  http.get('https://imgs.search.brave.com/*', passthrough),
+  http.get('https://fonts.gstatic.com/*', passthrough),
+  http.get('/src/*', passthrough),
+  http.get('/logo.svg', passthrough),
 ];

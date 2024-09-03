@@ -1,5 +1,17 @@
+import { useDarkMode } from '@hooks/DarkModeContext';
+import { useMemo } from 'react';
+
 export function List({ inverted }: { inverted?: boolean }) {
-  const color = inverted ? '#000' : '#A1A1A1';
+  const { isDarkMode } = useDarkMode();
+
+  const color = useMemo(() => {
+    if (isDarkMode) {
+      return inverted ? '#000' : '#A1A1A1';
+    } else {
+      return inverted ? '#A1A1A1' : '#000000';
+    }
+  }, [isDarkMode, inverted]);
+
   return (
     <svg
       width="16"

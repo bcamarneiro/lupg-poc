@@ -1,19 +1,27 @@
 .wrapper {
+  @apply w-full;
+}
+
+.innerWrapper {
   @apply flex justify-between items-center;
   @apply py-3 px-8 max-w-screen-xl mx-auto;
 }
 
 .navbar {
-  @apply flex flex-row gap-8 text-lg;
+  @apply flex-row gap-8 text-lg hidden md:flex;
 }
 
 .navbarItem {
 }
 
 .actions {
-  @apply flex flex-row gap-4;
+  @apply flex-row gap-4 hidden md:flex;
 }
 
 .logo {
   @apply ml-[1px];
+}
+
+.mobileMenu {
+  @apply flex md:hidden;
 }

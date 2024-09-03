@@ -19,7 +19,12 @@ function SearchBar({ onChange, className = '' }: SearchBarProps) {
       <input
         type="search"
         id="search"
-        className={clsx(styles.input, 'bg-levelup-600 dark:bg-levelup-200 border-levelup-200 dark:border-levelup-400')}
+        className={clsx(
+          styles.input,
+          'bg-levelup-600 dark:bg-levelup-200',
+          'border-levelup-200 dark:border-levelup-350',
+          'text-levelup-200 dark:text-levelup-500',
+        )}
         placeholder="Search..."
         onChange={onChange}
       />
